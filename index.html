@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PAUA</title>
+    <meta name="description" content="The Physics Association of the University of Auckland" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize/modern-normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="Index.html" class="logo"><img src="images/logo.png" /></a>
+
+        <nav class="nav desktop-nav" id="primary-nav">
+          <a class="std-nav" href="#event">EVENTS</a>
+          <a class="std-nav" href="#merc">MERCH</a>
+          <a class="std-nav" href="#abouts">ABOUT</a>
+          <a class="sign-up-button" href="https://forms.gle/SDCzU4Vi2t6sBQah9">SIGN UP (FREE)</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </header>
+    <!-- Mobile nav -->
+    <nav class="nav mobile-nav" id="mobile-nav">
+      <a href="#event">EVENTS</a>
+      <a href="#merc">MERCH</a>
+      <a href="#abouts">ABOUT</a>
+      <a href="https://forms.gle/SDCzU4Vi2t6sBQah9" class="mobile-signup-button">SIGN UP</a>
+    </nav>
+
+    <div class="mobile-overlay"></div>
+
+    <!------------------------------------------- HERO ---------------------------------------->
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="title">
+          <h1>
+            <span class="line the">THE</span>
+            <span class="line phys-assoc">PHYSICS ASSOCIATION</span>
+            <span class="line of-the">OF THE</span>
+            <span class="line uoa">UNIVERSITY OF AUCKLAND</span>
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------------------- EVENTS ---------------------------------------->
+
+    <section id="event" class="events">
+      <h2 class="section-title">Upcoming Events</h2>
+
+      <div class="events-carousel">
+        <article class="event-card" style="--bg: url(&quot;images/events/intro.jpg&quot;)">
+          <div class="event-overlay">
+            <h3>PAUA Intro Night</h3>
+            <p>Week 2 | Fri March 13 • 5pm</p>
+            <a href="/rsvp" class="btn-primary">RSVP</a>
+          </div>
+        </article>
+
+        <article class="event-card" style="--bg: url(&quot;images/events/report.jpg&quot;)">
+          <div class="event-overlay">
+            <h3>Report Writing Workshop</h3>
+            <p>Week 3 | Thu March 19 • 5pm</p>
+            <a href="/rsvp" class="btn-primary">RSVP</a>
+          </div>
+        </article>
+
+        <article class="event-card" style="--bg: url(&quot;images/events/board.jpg&quot;)">
+          <div class="event-overlay">
+            <h3>Board Games Night</h3>
+            <p>Week 3 | Fri March 20 • 5pm</p>
+            <a href="/rsvp" class="btn-primary">RSVP</a>
+          </div>
+        </article>
+
+        <article class="event-card" style="--bg: url(&quot;images/events/empaua.png&quot;)">
+          <div class="event-overlay">
+            <h3>EmPAUA</h3>
+            <p>Week 4 | Fri March 27 • 5pm</p>
+            <a href="/rsvp" class="btn-primary">RSVP</a>
+          </div>
+        </article>
+
+        <article class="event-card" style="--bg: url(&quot;images/events/fluids.jpg&quot;)">
+          <div class="event-overlay">
+            <h3>Fluid Dynamics #1</h3>
+            <p>Week 5 | Fri April 3 • 5pm</p>
+            <a href="/rsvp" class="btn-primary">RSVP</a>
+          </div>
+        </article>
+
+        <article class="event-card" style="--bg: url(&quot;images/events/ruapehu.png&quot;)">
+          <div class="event-overlay">
+            <h3>Field Trip #1: StarTrecking</h3>
+            <p>Mid-sem break | Apr 12–14</p>
+            <a href="/rsvp" class="btn-primary">Buy Ticket</a>
+          </div>
+        </article>
+
+        <article class="event-card" style="--bg: url(&quot;images/events/movies.jpg&quot;)">
+          <div class="event-overlay">
+            <h3>Movie Night</h3>
+            <p>Week 6 | Fri April 24 • 5pm</p>
+            <a href="/rsvp" class="btn-primary">RSVP</a>
+          </div>
+        </article>
+
+        <article class="event-card" style="--bg: url(&quot;images/events/mathex.png&quot;)">
+          <div class="event-overlay">
+            <h3>Mathex</h3>
+            <p>Week 8 | Fri May 8 • 5pm</p>
+            <a href="/rsvp" class="btn-primary">RSVP</a>
+          </div>
+        </article>
+
+        <article class="event-card" style="--bg: url(&quot;images/events/fluids.jpg&quot;)">
+          <div class="event-overlay">
+            <h3>Fluid Dynamics #2</h3>
+            <p>Week 11 | Fri May 29 • 5pm</p>
+            <a href="/rsvp" class="btn-primary">RSVP</a>
+          </div>
+        </article>
+
+        <article class="event-card" style="--bg: url(&quot;images/events/exam.jpg&quot;)">
+          <div class="event-overlay">
+            <h3>Exam Prep Workshop</h3>
+            <p>Week 12 | Wed and Fri June 5 • 5pm</p>
+            <a href="/rsvp" class="btn-primary">RSVP</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!------------------------------------------- MERCH ---------------------------------------->
+
+    <section id="merc" class="merch">
+      <h2 class="section-title">Merch</h2>
+
+      <div class="merch-grid">
+        <article class="merch-card">
+          <div class="merch-image">
+            <img src="images/merch/mtee.jpg" alt="Physics Association Mens tshirt" />
+          </div>
+          <div class="merch-info">
+            <h3>PAUA Mens Tee</h3>
+            <p>Warm, comfy, and perfect for winter labs.</p>
+            <span class="price">$45</span>
+          </div>
+        </article>
+        <article class="merch-card">
+          <div class="merch-image">
+            <img src="images/merch/mhood.jpg" alt="Physics Association Mens tshirt" />
+          </div>
+          <div class="merch-info">
+            <h3>PAUA Mens Hoodie</h3>
+            <p>Warm, comfy, and perfect for winter labs.</p>
+            <span class="price">$45</span>
+          </div>
+        </article>
+        <article class="merch-card">
+          <div class="merch-image">
+            <img src="images/merch/wtee.jpg" alt="Physics Association Mens tshirt" />
+          </div>
+          <div class="merch-info">
+            <h3>PAUA Womans Tee</h3>
+            <p>Warm, comfy, and perfect for winter labs.</p>
+            <span class="price">$45</span>
+          </div>
+        </article>
+        <article class="merch-card">
+          <div class="merch-image">
+            <img src="images/merch/whood.jpg" alt="Physics Association Mens tshirt" />
+          </div>
+          <div class="merch-info">
+            <h3>PAUA Womans Hoodie</h3>
+            <p>Warm, comfy, and perfect for winter labs.</p>
+            <span class="price">$45</span>
+          </div>
+        </article>
+        <article class="merch-card">
+          <div class="merch-image">
+            <img src="images/merch/mug.jpeg" alt="Physics Association Mens tshirt" />
+          </div>
+          <div class="merch-info">
+            <h3>PAUA Mug</h3>
+            <p>Warm, comfy, and perfect for winter labs.</p>
+            <span class="price">$45</span>
+          </div>
+        </article>
+        <article class="merch-card">
+          <div class="merch-image">
+            <img src="images/merch/keep.jpeg" alt="Physics Association Mens tshirt" />
+          </div>
+          <div class="merch-info">
+            <h3>PAUA KeepCup</h3>
+            <p>Warm, comfy, and perfect for winter labs.</p>
+            <span class="price">$45</span>
+          </div>
+        </article>
+        <article class="merch-card">
+          <div class="merch-image">
+            <img src="images/merch/notebook.jpeg" alt="Physics Association Mens tshirt" />
+          </div>
+          <div class="merch-info">
+            <h3>PAUA Hardcover Notebook</h3>
+            <p>Warm, comfy, and perfect for winter labs.</p>
+            <span class="price">$45</span>
+          </div>
+        </article>
+        <article class="merch-card">
+          <div class="merch-image">
+            <img src="images/merch/pen.jpeg" alt="Physics Association Mens tshirt" />
+          </div>
+          <div class="merch-info">
+            <h3>PAUA Pen</h3>
+            <p>Warm, comfy, and perfect for winter labs.</p>
+            <span class="price">$45</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!------------------------------------------- ABOUT ---------------------------------------->
+
+    <section id="abouts" class="about">
+      <div class="about-inner">
+        <h2 class="section-title">Our Kaupapa</h2>
+
+        <p class="about-text">
+          The Physics Association of the University of Auckland exists to build a welcoming, inclusive community for
+          physics students of all backgrounds. We aim to support students academically, socially, and professionally
+          through events, workshops, and opportunities to connect with staff, industry, and each other — all while
+          having a bit of fun along the way.
+        </p>
+
+        <h3 class="about-subtitle">Meet the Exec</h3>
+
+        <div class="exec-grid">
+          <article class="exec-card">
+            <div class="exec-photo">
+              <img src="images/execs/president.jpg" alt="some alt" />
+            </div>
+            <h4>President</h4>
+            <p class="exec-name">Ben Faris</p>
+            <p class="exec-desc">Oversees the direction of the club and ensures everything runs smoothly.</p>
+          </article>
+
+          <article class="exec-card">
+            <div class="exec-photo">
+              <img src="images/execs/president.jpg" alt="some alt" />
+            </div>
+            <h4>Vice President</h4>
+            <p class="exec-name">Zavier Bly</p>
+            <p class="exec-desc">Supports the president and coordinates events and collaborations.</p>
+          </article>
+
+          <article class="exec-card">
+            <div class="exec-photo">
+              <img src="images/execs/president.jpg" alt="some alt" />
+            </div>
+            <h4>Treasurer</h4>
+            <p class="exec-name">Zöe Congalton</p>
+            <p class="exec-desc">Manages finances, budgeting, and sponsorship funding.</p>
+          </article>
+
+          <article class="exec-card">
+            <div class="exec-photo">
+              <img src="images/execs/president.jpg" alt="some alt" />
+            </div>
+            <h4>Secretary</h4>
+            <p class="exec-name">Nellie Potter</p>
+            <p class="exec-desc">Handles admin, meeting minutes, and internal communications.</p>
+          </article>
+
+          <article class="exec-card">
+            <div class="exec-photo">
+              <img src="images/execs/president.jpg" alt="some alt" />
+            </div>
+            <h4>Marketing Manager</h4>
+            <p class="exec-name">Joe Urlich</p>
+            <p class="exec-desc">Builds industry connections and career-focused opportunities.</p>
+          </article>
+
+          <article class="exec-card">
+            <div class="exec-photo">
+              <img src="images/execs/president.jpg" alt="some alt" />
+            </div>
+            <h4>General Exec/Wellbeing Officer</h4>
+            <p class="exec-name">Nick Mahon</p>
+            <p class="exec-desc">Organises academic workshops, help sessions, and study support.</p>
+          </article>
+
+          <article class="exec-card">
+            <div class="exec-photo">
+              <img src="images/execs/president.jpg" alt="some alt" />
+            </div>
+            <h4>General Exec</h4>
+            <p class="exec-name">Lourdes Grace</p>
+            <p class="exec-desc">Plans social events and ensures the club stays fun and inclusive.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Physics Association UoA logo" />
+          <p>
+            The Physics Association of the University of Auckland<br />
+            Building community through curiosity.
+          </p>
+        </div>
+
+        <nav class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#event">Events</a>
+          <a href="#merc">Merch</a>
+          <a href="#abouts">About</a>
+          <a href="mailto:paua.uoa@gmail.com">Contact</a>
+        </nav>
+
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://instagram.com/paua.uoa" aria-label="Instagram">
+              <img src="images/icons/instagram.png" alt="" />
+            </a>
+            <a href="https://facebook.com/UOAPhysicsClub" aria-label="Facebook">
+              <img src="images/icons/facebook.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Physics Association of the University of Auckland</p>
+      </div>
+    </footer>
+  </body>
+</html>
