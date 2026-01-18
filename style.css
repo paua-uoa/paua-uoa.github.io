@@ -1,0 +1,569 @@
+/* ------------------- HEADER ------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0a447e;
+  box-shadow: 20px 0 10px;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  position: relative;
+  height: 90px;
+  top: 49px;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  gap: 2.72rem;
+  align-items: center;
+}
+
+.nav a {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: #f1f8ff;
+  transition-duration: 0.17s;
+  font-size: 0.9rem;
+}
+.std-nav {
+  transition-duration: 0.5s;
+}
+.std-nav:hover {
+  padding-bottom: 6px;
+  border-bottom: 3px solid #fff;
+}
+.sign-up-button {
+  border: 1px solid #fff;
+  padding: 0.6rem;
+  border-radius: 0.25rem;
+}
+
+.sign-up-button:hover {
+  background: #00a1c8;
+  color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+/* Mobile button */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+}
+/* Hide mobile nav on desktop */
+.mobile-nav,
+.mobile-overlay {
+  display: none;
+}
+.mobile-nav a {
+  color: #000;
+  padding: 9px 0;
+}
+
+@media (max-width: 800px) {
+  /* Hide desktop nav */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Show mobile nav and overlay when open */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -350px; /* hidden by default */
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 200;
+  }
+
+  .mobile-nav.is-open {
+    right: 0;
+  }
+
+  .mobile-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+  }
+
+  .mobile-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /*----------------------------------- Burger Button --------------------------------*/
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  /* Hamburger wrapper */
+  .hamburger {
+    width: 31px;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* The three bars */
+  .hamburger span {
+    color: #fff;
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: currentColor;
+    border-radius: 2px;
+    transition:
+      transform 200ms ease,
+      opacity 200ms ease;
+  }
+  .menu-toggle.is-open .hamburger span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .menu-toggle.is-open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-open .hamburger span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .mobile-nav {
+    right: -250px; /* hidden by default */
+    width: 250px;
+  }
+}
+/*-------------------------------- Hero --------------------------------*/
+
+.hero {
+  width: 100%;
+  min-height: 37vh;
+  background-image: url("images/aurora.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+.title h1 {
+  color: #fff;
+}
+.the {
+  font-size: 1rem;
+}
+.phys-assoc {
+  font-size: 2.1rem;
+}
+.of-the {
+  font-size: 1.1rem;
+}
+.uoa {
+  font-size: 2.1rem;
+}
+.line {
+  display: block;
+  text-align: center;
+}
+/*-------------------------------- Events --------------------------------*/
+
+.events {
+  position: relative;
+  padding: 2rem 1rem;
+  background: #f9fafb;
+}
+.events::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to left, #f9fafb, rgba(249, 250, 251, 0));
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.events-carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.events-carousel::-webkit-scrollbar {
+  display: none; /* clean look */
+}
+.event-card {
+  flex: 0 0 280px; /* card width */
+  height: 360px;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: start;
+
+  background: var(--bg) center / cover no-repeat;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.event-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: white;
+}
+
+.event-overlay h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+.event-overlay p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+.event-overlay a {
+  text-decoration: none;
+  color: #76dfff;
+  display: block;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 2px;
+  transition-duration: 0.3s;
+  text-align: center;
+}
+.event-overlay a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/*------------------------------------ Merch ------------------------------------*/
+
+.merch {
+  padding: 5rem 1rem;
+  background: #f9fafb;
+}
+
+.merch-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.merch-card {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.merch-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.merch-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.merch-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.merch-info {
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.merch-info h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.merch-info p {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.price {
+  font-weight: 600;
+  color: #111;
+}
+
+.merch-card:hover .merch-image img {
+  transform: scale(1.05);
+}
+
+.merch-image img {
+  transition: transform 0.3s ease;
+}
+
+.merch-card {
+  border: 1px solid #eee;
+  box-shadow: none;
+}
+
+.merch-card:hover {
+  border-color: #ddd;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------------------------- About Section ---------------------------- */
+.about{
+  display: block;
+}
+
+.about {
+  position: relative;
+  background: linear-gradient(rgba(10, 68, 126, 0.92), rgba(10, 68, 126, 0.92)), url("images/aurora.jpg"); /* reuse hero image */
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 1.5rem;
+  color: #f1f8ff;
+}
+
+.about-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about .section-title {
+  color: #ffffff;
+}
+
+.about-text {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.about-subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+}
+
+/* ---------------------------- Exec Cards ---------------------------- */
+
+.exec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+}
+
+.exec-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 1.2rem;
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  transition-duration: 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.exec-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+.exec-photo {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.exec-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.exec-card h4 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #76dfff;
+}
+
+.exec-name {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.exec-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.55;
+}
+
+
+
+/* ---------------------------- Footer ---------------------------- */
+
+.site-footer {
+  background: #071f3a;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 4rem 1.5rem 2rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+}
+
+.footer-brand img {
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #76dfff;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.social-icons a:hover {
+  background: #76dfff;
+  transform: translateY(-2px);
+}
+
+.social-icons img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.social-icons a:hover img {
+  filter: none;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
