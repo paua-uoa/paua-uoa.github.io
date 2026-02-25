@@ -370,16 +370,16 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* ------------------------------------ Sponsors ------------------------------------ */
-.sponsors-title{
+/* ------------------------------------ supports ------------------------------------ */
+.supports-title{
   padding-bottom: 2rem;
 }
-.sponsors {
+.supports {
   padding: 2rem 1.5rem 7rem 1.5rem;
   background: #ffffff;
 }
 
-.sponsor {
+.support {
   max-width: 1100px;
   margin: 0 auto 5rem;
   display: grid;
@@ -389,54 +389,54 @@
 #jane-street-logo{
   width: 260px;
 }
-.sponsor:last-child {
+.support:last-child {
   margin-bottom: 0;
 }
 
 /* Reverse layout for alternating rows */
-.sponsor--reverse {
+.support--reverse {
   direction: rtl;
   text-align: right;
 }
 
-.sponsor--reverse > * {
+.support--reverse > * {
   direction: ltr;
 }
-/* Right-align text for reversed sponsors */
-.sponsor--reverse .sponsor-text {
+/* Right-align text for reversed supports */
+.support--reverse .support-text {
   text-align: right;
   margin-left: auto;
 }
 
 /* Mobile reset */
 @media (max-width: 800px) {
-  .sponsor--reverse .sponsor-text {
+  .support--reverse .support-text {
     text-align: center;
     margin-left: 0;
   }
 }
 
 
-.sponsor-media {
+.support-media {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.sponsor-media img {
+.support-media img {
   max-width: 100%;
   max-height: 140px;
   object-fit: contain;
 }
 
 /* Text */
-.sponsor-text h3 {
+.support-text h3 {
   margin: 0 0 1rem;
   font-size: 1.6rem;
   color: #0a447e;
 }
 
-.sponsor-text p {
+.support-text p {
   margin: 0 0 1.25rem;
   font-size: 0.95rem;
   line-height: 1.75;
@@ -444,31 +444,31 @@
   max-width: 480px;
 }
 
-.sponsor-text a {
+.support-text a {
   font-weight: 600;
   text-decoration: none;
   color: #0a447e;
   transition: color 0.2s ease;
 }
 
-.sponsor-text a:hover {
+.support-text a:hover {
   color: #00a1c8;
 }
 
 /* -------------------- Mobile -------------------- */
 
 @media (max-width: 800px) {
-  .sponsor {
+  .support {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
   }
 
-  .sponsor--reverse {
+  .support--reverse {
     direction: ltr;
   }
 
-  .sponsor-text p {
+  .support-text p {
     margin-left: auto;
     margin-right: auto;
   }
